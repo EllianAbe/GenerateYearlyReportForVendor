@@ -1,0 +1,339 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_NavigateTo_WIDetails" this:System1_NavigateTo_WIDetails.in_System1_URL="https://acme-test.uipath.com/" this:System1_NavigateTo_WIDetails.in_TaxID="97384814" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_System1_URL" Type="InArgument(x:String)" />
+    <x:Property Name="in_TaxID" Type="InArgument(x:String)" />
+    <x:Property Name="in_Year" Type="InArgument(x:String)" />
+    <x:Property Name="out_ReportDirPath" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>2146.6666666666665,3713.777777777778</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>System1_NavigateTo_WIDetails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="System1_DownloadMonthlyReports" sap:VirtualizedContainerService.HintSize="724.4444444444445,3649.777777777778" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="662.2222222222222,144" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Downloading Montly Reports: &quot; + in_TaxId]" />
+    <Assign sap:VirtualizedContainerService.HintSize="662.2222222222222,84.44444444444444" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_ReportDirPath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["Data\Input\" + in_TaxID + "\"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="662.2222222222222,82.66666666666667" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[out_ReportDirPath]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="662.2222222222222,3106.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a82b73a3-5429-4c92-b59c-1b6599a13181" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="628.4444444444445,2888.8888888888887" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:List(x:String)" Name="SelectItems" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="566.2222222222222,84.44444444444444" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[in_System1_URL + &quot;reports/download&quot;]" Version="V3" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="566.2222222222222,222.22222222222223" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a82b73a3-5429-4c92-b59c-1b6599a13181" Text="[in_TaxID.Trim()]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" CvType="InputBox" DesignTimeRectangle="704, 505, 546, 38" DesignTimeScaleFactor="1.1299999952316284" ElementType="InputBox" FriendlyName="'INPUT vendorTaxID'" FullSelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="21308f33-a2f0-454e-9c37-d4c555277308" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAiYAAAAqCAYAAACHk5AUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEJsAABCbAXSJnEsAAAGrSURBVHhe7dmxisJAGIXRff9ns0qVShRSWSiCEFHJLBcS2OBuZ5a/OAdukUH7j5mvBgBQhDABAMoQJgBAGb+GyTAMreu6ttvtzMzMzDZZWiPN8dNbmPR93/b7fTudTu18PrfL5WJmZmb20aUx0hppjrTHYhUmqZb84Hq9tnEc2+PxaM/n08zMzOyjS2OkNdIcaY/l5mQVJrlSScHkD9M0zacAAJ+X1kigpD3SILEKk7z33O93UQIA/Is0R9ojDRJvYfJ6veYvAIDt5aVGmAAAJaQ9hAkAUIIwAQDKECYAQBnCBAAoQ5gAAGUIEwCgDGECAJQhTACAMoQJAFCGMAEAyhAmAEAZwgQAKEOYAABlCBMAoAxhAgCUIUwAgDKECQBQhjABAMoQJgBAGcIEAChDmAAAZQgTAKAMYQIAlCFMAIAyhAkAUIYwAQDKECYAQBl/hknXde12u81fAADbS3ukQWIVJsMwtMPh0KZpmk8AALaT5kh7pEFiFSbR9307Ho9tHMf5BADg89IaaY60x+ItTCLVkiuVvPeYmZmZbbG0xnJTsvg1TAAA/l9r31GeZw23jseDAAAAAElFTkSuQmCC" InformativeScreenshot="15d3a45885d8e0a18c28bfae730027b7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="Vendor TaxID:" CvType="Text" DesignTimeRectangle="704, 477, 105, 23" ElementType="Text" FriendlyName="'Vendor TaxID'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Vendor TaxID:' check:innerText='Vendor TaxID:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG0AAAAbCAYAAAB2gwGKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEJsAABCbAXSJnEsAAAJlSURBVGhD7ZftjYMwDIZvJ6Ypo8AoFZNUbFJ1lVyAxHb8wYWjVBedX8k/CInj+HFM+xVczcmhNSiH1qAcWoNyaA3KoTUoh9agCLRXmG5d6Lpow5zGqPB9f3+lsWv0uvdbHLcp7nqFyFlN68P0TNN/rTmMha/8rNv4WBf9qOKmQbK6Mbpnek6hX9+94zD7+q/QFqu5EGV7BDCS+vWJRH1yr0XX7WdD4/mdh228pljYN81qkXprxI0WKzcrEvEYzXmLCj9x/mwlsfAj34OfYcSKVlt9KRMa34/GrhU4zOeQ+LPWCrUc6/PFDxH1AKI12u0lOwc/qmH7LcEzIzHY/vZ91bQb9cwCWDZlv3UdJlgmvQaaFkclNO3bJZzlA2mHTGM0ybAhScQ2tndQ9EWrGufJroDQMPYaadCyL4hdyUsRazaaE3hfB03NqyIJjSRjS5C8tru3I1WiWr08aIBY/vDha3VfUWw9xFXREqlM/6t4V2EFQQpRFsvHoLFDKBW2D22bdwYaDx58cRgQ2/uhwZgwC0w0kexj0PScSanQaCsYB+moJjlV0FjSs/ha8zCX3TQCIvtS2yPZMxm270XHoGVfpQ8pHVoMnf/QKDaBZOEB6hLNg8ZnDJQkLK+FhNF5O9+0s9AUQDCHQqPz7jIneJY8ZkNT/RsyoFEni7H2RRPGLAdTB43vw4ys5RWNhrFdctOE5aTyoiHPwo+EZpl+U0vIJjRa3XoS9m9jLbRFBbg4//z/tLPQouj5U9Jp+8KYSUGLjnAEmnbDjkJz/Vk5tAbl0BqUQ2tQDq1BObQG5dAalENrTiF8A+BsELRG4QEWAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NSelectItem DisplayName="Select Item '---'" sap:VirtualizedContainerService.HintSize="566.2222222222222,159.11111111111111" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[in_Year]" ScopeIdentifier="a82b73a3-5429-4c92-b59c-1b6599a13181" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="3">
+                  <x:String>---</x:String>
+                  <x:String>2023</x:String>
+                  <x:String>2022</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" CvType="InputBox" DesignTimeRectangle="828, 613, 1, 38" DesignTimeScaleFactor="1.1299999952316284" ElementType="Button" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl id='reportYear' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='reportYear' tag='SELECT' type='' class='selectpicker' aaname='' /&gt;" Guid="b0334a3f-1557-46f8-a822-50ec6c070b5f" InformativeScreenshot="51d49b0adc7db819097ddb9b421e6264.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="Year:" CvType="Text" DesignTimeRectangle="704, 585, 39, 23" ElementType="Text" FriendlyName="'Year'" FullSelectorArgument="&lt;webctrl aaname='Year:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Year:' tag='LABEL' type='' class='' check:innerText='Year:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAbCAYAAADlJ3ZtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEJsAABCbAXSJnEsAAAEgSURBVFhH7ZThDYQgDIVvJ6eRUWAUwyTGTYyr9FRKKRU8TUTPhJf0x5UTvj5aPvAiVdhSqrCl9F7YQTfQNHO0FibMkXrj1uYwPeZuVuzsaEEhkOo47gS2xUL0gLn7tWmDqVPooAHCIlcV2BFzDyjRs9LF8Dt2m7VNrhB2Uz54C9H32oDx/1nOpO/iPdMDxpw0OuE0L0gEwSRAXQSAuFgXqyGnYGfJjaKh8sXwQRQ5307hNgZyz+8VzjjWXlnYyBkxVClHQvAbcMoVTvmDQ5uHPdyrMtAl9tTJeAY2ewjraWqVnTYoCZt6yujJW+G2YNzpe2G5cyIcSH59iZ+wZ1+DfdhFWyBycVVw16+R+wh3Iez/qcKWUoUtpQpbShW2jAC+KkpxNxxGSDcAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NGetAttributeGeneric x:TypeArguments="scg:List(x:String)" Attribute="items" DisplayName="Get Attribute '---'" sap:VirtualizedContainerService.HintSize="566.2222222222222,210.66666666666666" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[SelectItems]" ScopeIdentifier="a82b73a3-5429-4c92-b59c-1b6599a13181" Version="V3">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" CvType="InputBox" DesignTimeRectangle="828, 588, 1, 38" DesignTimeScaleFactor="1.1299999952316284" ElementType="Text" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl id='reportMonth' tag='SELECT' class='selectpicker' /&gt;" FuzzySelectorArgument="&lt;webctrl id='reportMonth' tag='SELECT' class='selectpicker' type='' aaname='' /&gt;" Guid="f348f1fc-a7c6-43f3-9802-78d5abdb40ec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAUAAAAqCAYAAAB7lZEGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEJsAABCbAXSJnEsAAAApSURBVDhPY/iPBZAgeObMmf/omFIzoTQKGBVEA6OCaGCABYnMCP//AwDnHj7s+EeTxgAAAABJRU5ErkJggg==" InformativeScreenshot="26c40ed9606b1220f5c7ac38d6e1a2a4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="Month:" CvType="Text" DesignTimeRectangle="704, 560, 52, 23" ElementType="Text" FriendlyName="'Month'" FullSelectorArgument="&lt;webctrl aaname='Month:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Month:' tag='LABEL' type='' class='' check:innerText='Month:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAbCAYAAAApvkyGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEJsAABCbAXSJnEsAAAFgSURBVFhH7ZSLjcMgDIZvp0wTRgmjREwSZZOqq3A8bGMDoVRqT0fEL1lq7NT2Z0N+7M01AUfXBBxdE3B0ZYCn1ctiF7TtBD/oYaxicbU/IfBh+TqrsZj9uatYk/l61QZctPMkUSGwrwAeOub/G0BlzQNCLrVZeWxwQLXGpAkCY8rFKoDZ8c23n+J+aHKQmCc/IRgTgKIOX4CTqBFdl4B6h5fxHuJkN0ObJECMFcYaKAYgTR8dgFVjg3wL8MDfMQEWUfuZAbJtsI/SuYEPjxUHpPcq/20dUWd+EEEsH/kqagCmJvWB989PJt3FAEjbax3JyjOIBtEDKO6g7PVKTUDa2qZjc6HABaAo7oW5/jGgOFbeQhM32iB/Tr4MkL+DTTpd38FOQDawLwKyBqixHJA1UBiDeRsw+bsBKzVeApbJS8AgSo724siCCkCnNNTo/yDg/TQBR9cEHF0TcHTdHNDaXyBd4XO3o+rbAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetAttributeGeneric.Target>
+            </uix:NGetAttributeGeneric>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="566.2222222222222,1936.888888888889" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[SelectItems]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="OptionItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="532.4444444444445,1747.5555555555557" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="si:FileInfo" Name="DownloadedFile" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[OptionItem = &quot;---&quot;]" sap:VirtualizedContainerService.HintSize="489.77777777777777,297.77777777777777" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376.8888888888889,113.77777777777777" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="334.22222222222223,24.88888888888889" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5" />
+                      </If.Else>
+                    </If>
+                    <uix:NSelectItem DisplayName="Select Item '---'" sap:VirtualizedContainerService.HintSize="489.77777777777777,159.11111111111111" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[OptionItem]" ScopeIdentifier="a82b73a3-5429-4c92-b59c-1b6599a13181" Version="V3">
+                      <uix:NSelectItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="13">
+                          <x:String>---</x:String>
+                          <x:String>January</x:String>
+                          <x:String>February</x:String>
+                          <x:String>March</x:String>
+                          <x:String>April</x:String>
+                          <x:String>May</x:String>
+                          <x:String>June</x:String>
+                          <x:String>July</x:String>
+                          <x:String>August</x:String>
+                          <x:String>September</x:String>
+                          <x:String>October</x:String>
+                          <x:String>November</x:String>
+                          <x:String>December</x:String>
+                        </scg:List>
+                      </uix:NSelectItem.Items>
+                      <uix:NSelectItem.Target>
+                        <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" CvType="InputBox" DesignTimeRectangle="704, 588, 248, 38" DesignTimeScaleFactor="1.1299999952316284" ElementType="Button" FriendlyName="'---'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='btn dropdown-toggle bs-placeholder btn-default' aaname='---' /&gt;" Guid="ab722351-75e7-4d38-986c-1b7df7b8c927" InformativeScreenshot="64d3c3ddd0c7d7b4ca90ae57c0c386af.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="Month:" CvType="Text" DesignTimeRectangle="704, 560, 52, 23" ElementType="Text" FriendlyName="'Month'" FullSelectorArgument="&lt;webctrl aaname='Month:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Month:' tag='LABEL' type='' class='' check:innerText='Month:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAbCAYAAAApvkyGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEJsAABCbAXSJnEsAAAFgSURBVFhH7ZSLjcMgDIZvp0wTRgmjREwSZZOqq3A8bGMDoVRqT0fEL1lq7NT2Z0N+7M01AUfXBBxdE3B0ZYCn1ctiF7TtBD/oYaxicbU/IfBh+TqrsZj9uatYk/l61QZctPMkUSGwrwAeOub/G0BlzQNCLrVZeWxwQLXGpAkCY8rFKoDZ8c23n+J+aHKQmCc/IRgTgKIOX4CTqBFdl4B6h5fxHuJkN0ObJECMFcYaKAYgTR8dgFVjg3wL8MDfMQEWUfuZAbJtsI/SuYEPjxUHpPcq/20dUWd+EEEsH/kqagCmJvWB989PJt3FAEjbax3JyjOIBtEDKO6g7PVKTUDa2qZjc6HABaAo7oW5/jGgOFbeQhM32iB/Tr4MkL+DTTpd38FOQDawLwKyBqixHJA1UBiDeRsw+bsBKzVeApbJS8AgSo724siCCkCnNNTo/yDg/TQBR9cEHF0TcHTdHNDaXyBd4XO3o+rbAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSelectItem.Target>
+                    </uix:NSelectItem>
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="489.77777777777777,643.5555555555555" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch.Try>
+                        <ui:GetLastDownloadedFile FileResource="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="483.55555555555554,533.3333333333334" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp,dwn,crdownload" Timeout="12">
+                          <ui:GetLastDownloadedFile.Body>
+                            <ActivityAction>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.77777777777777,271.1111111111111" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download Report'" sap:VirtualizedContainerService.HintSize="387.55555555555554,159.11111111111111" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a82b73a3-5429-4c92-b59c-1b6599a13181" Version="V3">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/reports/download" DesignTimeRectangle="704, 668, 151, 38" DesignTimeScaleFactor="1.1299999952316284" ElementType="Button" FriendlyName="'Download Report'" FullSelectorArgument="&lt;webctrl id='buttonDownload' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonDownload' tag='BUTTON' type='button' class='btn btn-primary' aaname='Download Report' check:innerText='Download Report' /&gt;" Guid="48d7aebf-1b0d-4c7e-a0fe-30a9d3003c7f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJsAAAAqCAYAAACk9ylcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEJsAABCbAXSJnEsAAAPTSURBVHhe7Zy/bhNBEId5FDooaHgLGp4AkHgCqjwABaJCgjpFeAmUSHkGp03jwg1VXODG9bKzO3s3szt7dz5fNrH1G+kT1u2f25n57hxR+IVDIBoFZEM0C1O277//uLcfvrqX7y8AmAX5Qx7JKGR79+Wne/Pxm3v16Yd7/fkXALMgf8gj8imFko1MpAnWYgDmQD6lN5ySjV59eKOBJSGfyCsKJRt911oLADgG8ooCsoFHB7KBZkA20AzIBpoB2UAzIBtoBmQDzVhetsu12/I+eWxXN/aapty5e3+W+2trbElu3O3O32hzZ4xFrjahLHbs1u7CWPNkUF8HcpnCo8lWNjM2eaj4bXhmsplSPZdaJcZzmUJD2UbGmnEKsnmuH/zg3t1eGmPNOUXZPFaB86+Tfm0UQ3/9GtdCYx7cFRdlu7qLxUmh7mfIxmfuwhCg+Mor5nBDUmzWx8lm1TE/p9o75RX/TWH96VKvt4dq6c90m+bs/rm//DEG1VnMP4Dmsl2s9n40HTg1SCQQxOnXh8LIovK4vBb2DE3rG97dn8/TFz2Tjffrx3kPIUEpBTe0O0NlDcVc2cK5xJutyCO/Zy9ZPffxelv17dYN5DKF5rLFZDjZvKCMbIKWM45td0kuuhYLEQtqF0U3VcpWKaLKIZOTUXuaeeRCltRlK9eac41z5vdT9ZtQb3vOGciWi6TncMJhv5Q8Je0/X4trxbh8kiN12eLnfH69uNzQFLxn/2aVc8cbFM5VC7Vu+JzxusxLIOozqd6iP/2c8Vym0Fw2mbDdJI96ukRBae8wP14L96C53R6y+LyXZ0y28qy6uEoK3kfuqffvCdfHZFPr+L5FszPJszhINuOcZyubbMDwk9Zf79bQdSmA/6wbOk+2fL7ap5KP3NNu4niD9LkSLJa6XjunpCKbEGlSvc9GtnxMFELOK5rABbj319Pa2OB9dq9DZasUUZ7TLH4mhJkHzzlYNk/YT+ZRa7bMxb6fehCm1NvM9+Rks4rBScjkuNB6Pa+VheL76MIcKpun1tg0n+8j9wz7hUj3ztbIOXNkS2NGvsU5srwoutyKXkyo9ynKZkUuQaJvHkX55FnNHJL3INmI/Mx5UbkhXfjx+JUkz5oayXHs/7N18ojG5+c06rFdrTvpKFSezGC9TdnSdQqrP9NYXjbwRCTZ7Af6OQDZzgbIBpoB2QDogGygGZANNAOygWZANtAMyAaaAdlAM0zZ8JNZYGmqP5mFHwMES1P9MUAK/MwpWALyhzyq/sxpCjKRXn30XQvAHMif9EZLYcqGQDxGQDZEo3DuP4rLbfpSRrCzAAAAAElFTkSuQmCC" InformativeScreenshot="93ac10668613cd392840dbd71eed134a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Download Monthly Report' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:GetLastDownloadedFile.Body>
+                        </ui:GetLastDownloadedFile>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,474.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence sap:VirtualizedContainerService.HintSize="449.77777777777777,405.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.55555555555554,145.77777777777777" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Failed to download monthly report for: &quot; + OptionItem]" />
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="387.55555555555554,107.55555555555556" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True" UnblockInput="True">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22201c02-401b-44d4-9937-07855a4cfeff" InformativeScreenshot="2da76eb0f80319650d11c415fb1f09f5" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='ACME System 1*' /&gt;&lt;ctrl name='acme-test.uipath.com*' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                    <If Condition="[DownloadedFile isnot Nothing]" sap:VirtualizedContainerService.HintSize="489.77777777777777,438.22222222222223" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376.8888888888889,254.22222222222223" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[out_ReportDirPath + OptionItem + &quot;.csv&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="334.22222222222223,165.33333333333334" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[DownloadedFile.FullName]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 1299, 1028" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAReSURBVFhHvZdtbFNlFMcf3SxUfI0miLAEWdShCV+EGD9oUJBJAobwQb8IGklkKEQkcy8MZK90tGsnZbxsvkDmxsYkS8QFPhDYLIy+sbv2rhW3dYPFbGyVbYwJJMu2wzm3Prd317ZCc+uHf9vnPC/n13PPc57nMrZX6EPdQo39zyKf1wgAZJWQ2sJtzYVrkw+lDT9G5UbBZWB5TmC7XIlRHgnXJ4hSyecwAYwxAzawM/1EoKFSvLEh97eBjOw4xedmNg9k7LSFRO2sloEMg2Po0x3n+4tYMUaiUIr0SAiAiL5xwfrGqyvSt69hiZZuXzv6cwP+cQVAoRveqQtsizRBS33vHV6cTAD5agA0rG7o+SLSpHg0ODG9aGlFR+vy+kCl0l4p3HgpKkC6RgAA8GxSqQfY5zZgm22wq3XwFO+zOIeiA6z5OQyQctBXpTd6BdwZwrsNPVZuV2vJD3/YWOFl9xNmr5hULGwiW8v1OxvZpmZg5SKw7a2Y8e3Ax5c5g9EB1p4MA+hNnjssH7dlth2WHusMcrta8yt8wHLswIpwbEHbUW5P/e4KsK0XJDX2jBVw+30DPGkR7awIt8pOJ7xR03WO29VadNg/Ke1tLDJPfyvuUfbtbu5fn+MIvqK0HYmVAzMAzKJTAdCsXEQpBJimMQQwx+TNjzRm6PbUQ/x3lWc4cQC60nYZYOEhP+jxsTxqbAfMp3JurxZHNAY44p/iAHpFBB63eIF9jbmBJVhn9Bi5vdanPYAcASUA/mtgu7H24+H2nLVDttdoDZAaBWAB7Q4CwLo/d38cAE9Z7hsg4iOIC+B9BcDsfR6XdGrhFltW3XWe29VKq/JPSAAGHFsiyPs9LgBlJcQk8mGFA5ZlhxX1gTPcrlbKobCjOWavidvjAnjreEAG+Ph03yn21SVgmZfg9druAW5XK9mI2Y5HOct2gFUIbuH25w/EAfBmTRjgqH9ks1RK6VDBx9B5a+IF3sc1DbCE5TqoBEvb7drfE/N431xrx4MDrKwPA5D0Zeg8FxehwXvckHfh+icmVzCt7vfRxTkt/VmMzopinLv1IrxW03VTOTdaBKpjAbynOo6b/hzfwj46hxmO/ZQPGGZdGYac2plYZOgOSU4+s8HoFKxSzk2hHKBHg3VgntUnnxExI6AGIH3Y1NfGdmAufInHKk2ik48umBgRsusK3LDhbL9c6biYAZ1suyglMUbpILfX+R8QgNTUO77sg8beX58xeuAxrO3JeL7Pt4jjG3+5+lPf3UldpDlvH+++mXqgY/LlSj8srw1kcfsxMcZhFA1ASx0WYgDglSzhl9IfPcNpUQHwUro20iStNQsf47+v5ZjN6072lpy4Mrqw3BV81eSYKSPKjCq1D0ptc4Qx/6UK4a8XjY6hdcmUoJi86FsCCL2aIUQSdszGRHsYvylMWusRFNuLotoReh2UXs1CDXpXo9cl2l5ElwjxtblPEn50o0ZQQUmGf74ToZlro0+h8x4tMHhuvyezngAAAABJRU5ErkJggg==" InformativeScreenshot="b9ee6dec5aba62d016b28d3cd8576fcf.jpg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" Title="ACME System 1 - Work Items" Url="[in_System1_URL]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

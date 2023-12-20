@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "YearlyReportItems",
+    "type": "object",
+    "properties": {
+      "workItemId": {
+        "type": "string"
+      }
+    },
+    "required": ["workItemId"]
+  }
+  

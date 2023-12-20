@@ -1,0 +1,3 @@
+InvoiceNumber,Item,Amount,Tax,Total,Currency,Date
+401344,"IT Support",74581,14916.2,89497.2,USD,2017-03-19
+857373,"Professional Services",83564,16712.8,100277,RON,2017-03-23

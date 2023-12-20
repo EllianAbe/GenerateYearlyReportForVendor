@@ -1,0 +1,4 @@
+InvoiceNumber,Item,Amount,Tax,Total,Currency,Date
+394802,"Beverages and Catering",16869,3373.8,20242.8,USD,2017-04-01
+782901,"Beverages and Catering",121366,24273.2,145639,USD,2017-04-20
+867599,"IT Support",227243,45448.6,272692,EUR,2017-04-12

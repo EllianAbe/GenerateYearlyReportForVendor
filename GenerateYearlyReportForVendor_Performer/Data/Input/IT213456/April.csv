@@ -1,0 +1,5 @@
+InvoiceNumber,Item,Date,Amount,Tax,Total,Currency
+440499,"Professional Services",2017-04-20,124041,24808.2,148849,RON
+899794,"Various paper supplies",2017-04-02,80563,16112.6,96675.6,CAD
+231895,"Concierge Services",2017-04-03,82264,16452.8,98716.8,CAD
+858775,"IT Support",2017-04-03,51406,10281.2,61687.2,EUR

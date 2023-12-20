@@ -1,0 +1,3 @@
+InvoiceNumber,Item,Date,Amount,Tax,Total,Currency
+295288,"Professional Services",2017-06-10,107332,21466.4,128798,EUR
+865819,"Beverages and Catering",2017-06-20,267582,53516.4,321098,CAD

@@ -1,0 +1,3 @@
+InvoiceNumber,Item,Amount,Tax,Total,Currency,Date
+164783,"IT Support",140859,28171.8,169031,CAD,2017-06-26
+392334,"Waste management services",143943,28788.6,172732,CAD,2017-06-21

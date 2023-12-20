@@ -1,0 +1,4 @@
+InvoiceNumber,Item,Amount,Tax,Total,Currency,Date
+441716,"IT Support",13912,2782.4,16694.4,USD,2017-08-08
+167425,"Beverages and Catering",240088,48017.6,288106,USD,2017-08-17
+632559,"Waste management services",136101,27220.2,163321,EUR,2017-08-23

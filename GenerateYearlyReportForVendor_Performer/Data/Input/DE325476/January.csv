@@ -1,0 +1,9 @@
+InvoiceNumber,Item,Date,Amount,Tax,Total,Currency
+624269,"Concierge Services",2017-01-15,134621,26924.2,161545,EUR
+735866,"IT Support",2017-01-05,81937,16387.4,98324.4,RON
+914938,"Waste management services",2017-01-19,27088,5417.6,32505.6,CAD
+732789,"Professional Services",2017-01-24,224073,44814.6,268888,EUR
+420036,"Beverages and Catering",2017-01-06,7449,1489.8,8938.8,EUR
+947779,"Various paper supplies",2017-01-10,260080,52016,312096,USD
+291831,"Concierge Services",2017-01-21,84532,16906.4,101438,CAD
+631880,"Concierge Services",2017-01-18,95867,19173.4,115040,RON
