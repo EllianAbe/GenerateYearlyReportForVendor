@@ -1,4 +1,4 @@
-### Calculate Client Security Hash ###
+### Generate Yearly Report For Vendor ###
 **Configurations**
 
 * project requires this credential stored in orchestrator: AcmeSystem1Credentials, username: [acmesystem1 email], password: [acmesystem1 password]
